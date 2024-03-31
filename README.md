@@ -21,24 +21,25 @@ Welcome to my Django project! 👋 This repository contains a web application bu
    git clone https://github.com/your-username/django-project.git
    Navigate to the project directory:
 
-cd django-project
-Create a virtual environment and activate it:
+2. cd django-project
+   Create a virtual environment and activate it:
 
-python -m venv env
-source env/bin/activate  # On Windows, use `env\Scripts\activate`
-Install the required dependencies:
+3. python -m venv env
+   source env/bin/activate  # On Windows, use `env\Scripts\activate`
+   Install the required dependencies:
 
-pip install -r requirements.txt
-Apply database migrations:
+4. pip install -r requirements.txt
+   Apply database migrations:
 
 
 
-python manage.py migrate
-Start the development server:
+5. python manage.py migrate
+   Start the development server:
 
-python manage.py runserver
-Open your web browser and visit http://localhost:8000 to access the application.
-Usage 🚀
+6. python manage.py runserver
+   Open your web browser and visit http://localhost:8000 to access the application.
+
+##Usage 🚀
 Explore the various features of the application by navigating through the user-friendly interface. Create new products, manage contacts, and keep track of your to-do lists. Additionally, you can interact with the RESTful API to perform CRUD operations and integrate the application with other systems.
 
 Contributing 🤝
@@ -56,15 +57,3 @@ Social Links 🌐
 <a href="https://leetcode.com/Krishanmurariji/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="Krishan_murari" height="30" width="40" /></a>
 &nbsp;
 
-This README file includes the following sections:
-
-- **Banner**: A colorful banner image to make the README more visually appealing.
-- **Introduction**: A brief introduction to the project and its purpose.
-- **Features**: A list of the main features implemented in the project.
-- **Installation**: Step-by-step instructions for installing and setting up the project on a local machine.
-- **Usage**: Information on how to use and navigate the application.
-- **Contributing**: Guidelines for contributing to the project, including opening issues and submitting pull requests.
-- **Social Links**: Links to your social media profiles, personal website, and other online presences.
-- **License**: Information about the license under which the project is distributed.
-
-Feel free to customize and update the content according to your project's specifics. You can also add more sections or modify the existing ones to suit your needs.
