@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <Style>
+    table td{
+        padding: 10px;
+        border: 1px solid black;
+    }
+  </Style>
+  <body>
+   
+    <div style="margin: 0px 30px ;display: flex; justify-content: space-between; align-items:center ;">
+        <div>
+            <table border="4">
+                <tr>
+                  <th>Roll No</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                  <th>Description</th>
+                </tr>
+          
+                {% for i in data2 %}
+                <tr>
+                  <td >{{i.cid}}</td>
+                  <td >{{i.name}}</td>
+                  <td>{{i.email}}</td>
+                  <td>{{i.add}}</td>
+                  <td>{{i.dis}}</td>
+                </tr>
+                {% endfor %}
+              </table>
+        </div>
+        <div>
+            <form method = 'POST' action = '/delformconatct/'>
+                {% csrf_token %}
+                <input type="number" placeholder="Enter Roll No to delete:" id="id" name="id">&nbsp &nbsp <button type="Submit">Delete</button><br>
+            </form>
+        </div>
+        <div>
+            <form method = 'POST' action = '/Updateconatct/'>
+                {% csrf_token %}
+                <input name="id" type="number" placeholder="Enter Roll No to Update:"><button type="Submit">Update</button><br>
+            </form>
+        </div>
+    </div>  
+    
+  </body>
+</html>
+{% endblock body %}

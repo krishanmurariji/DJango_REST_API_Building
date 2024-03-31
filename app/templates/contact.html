@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        .Forms {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            display: flex;
+            justfy-contect: center;
+            align-items: center
+            height: 100vh;
+            width: 30vw;
+            border: 2px solid black;
+            padding: 20px
+        }
+    </style>
+
+</head>
+<body>
+    <h2>The Name Present in Model Names:</h2>
+    {% for i in data %}
+    <ul>
+        <li>Your First name is :{{i.fname}}</li>
+        <li>Your last name is :{{i.lname}}</li>
+    </ul>
+    {% endfor %}
+
+    {% if message %}
+    <div id ='dis' class="alert alert-info">
+        {{ message }}
+    </div>
+    {% endif %}
+    <script>
+      var vanish = document.getElementById('dis');
+  
+      // If the alert element exists
+      if (vanish) {
+          // Set a timeout to hide the alert after 3 seconds (3000 milliseconds)
+          setTimeout(function() {
+              vanish.style.display = 'none';
+          }, 3000);
+      }
+  </script>
+
+    <div class="Forms">
+        <form method='POST' action='/savename/'>
+            <h3>Insert Name here</h3>
+            {% csrf_token %}
+            <label for="fname">First name:</label><br>
+            <input type="text" id="id" name="fn"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="ln" name="ln"><br><br>
+            <button type="Submit">Submit!</button><br>
+        </form>
+        <form method='POST' action='/delname/'>
+            <h3>Delete Name here</h3>
+            {% csrf_token %}
+            <label for="fname">First name:</label><br>
+            <input type="text" id="id" name="fn"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="ln" name="ln"><br><br>
+            <button type="Submit">Delete!</button><br>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock body %}
